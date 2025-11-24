@@ -4,7 +4,7 @@ const floralproducts = [
         id: 1,
         nombre: "Bouquets de flores",
         descripcion: "Arreglos elegantes y versátiles. Se trabajan en diferentes tamaños y combinaciones de color, con envolturas premium y acabados decorativos.",
-        image: "../../public/images/details/bouquet.jpg",
+        image: "public/images/details/bouquet.jpg",
         precio: 18,
         material: "Papel kraft/premium, lazos, cinta, papel seda",
         ideal: "Cumpleaños, aniversarios, graduaciones, agradecimientos."
@@ -13,7 +13,7 @@ const floralproducts = [
         id: 2,
         nombre: "Cajas de rosas",
         descripcion: "Presentación elegante en caja cilíndrica o cuadrada. Conserva hidratación y forma por más tiempo.",
-        image: "../../public/images/details/caja_rosas.jpeg",
+        image: "public/images/details/caja_rosas.jpeg",
         precio: 28,
         material: "Caja rígida, esponja floral (oasis), lazo",
         ideal: "Aniversarios, San Valentín, cumpleaños, ocasiones especiales."
@@ -22,7 +22,7 @@ const floralproducts = [
         id: 3,
         nombre: "Coronas florales",
         descripcion: "Diseños solemnes y armoniosos, adaptados a protocolos y preferencias de color.",
-        image: "../../public/images/details/corona_flores.jpg",
+        image: "public/images/details/corona_flores.jpg",
         precio: 45,
         material: "Aro base, esponja floral, banda con mensaje",
         ideal: "Condolencias y homenajes."
@@ -31,7 +31,7 @@ const floralproducts = [
         id: 4,
         nombre: "Peceras florales",
         descripcion: "Composiciones modernas en vidrio, con flor focal y follaje en agua.",
-        image: "../../public/images/details/pecera_flores.jpg",
+        image: "public/images/details/pecera_flores.jpg",
         precio: 22,
         material: "Pecera de vidrio, agua, piedras decorativas",
         ideal: "Centros de mesa en eventos, recepciones, oficinas."
@@ -40,7 +40,7 @@ const floralproducts = [
         id: 5,
         nombre: "Pedestales Florales",
         descripcion: "Arreglos altos para entradas, pasillos o escenarios que buscan impacto visual.",
-        image: "../../public/images/details/pedestal_flores.jpg",
+        image: "public/images/details/pedestal_flores.jpg",
         precio: 55,
         material: "Pedestal/base metálica, esponja floral",
         ideal: "Bodas, graduaciones, eventos corporativos."
@@ -49,7 +49,7 @@ const floralproducts = [
         id: 6,
         nombre: "Arreglos simples",
         descripcion: "Detalles rápidos y económicos con flores frescas y combinaciones armoniosas.",
-        image: "../../public/images/details/arreglos_simples.jpeg",
+        image: "public/images/details/arreglos_simples.jpeg",
         precio: 12,
         material: "Base pequeña o jarrón, papel kraft",
         ideal: "Detalles cotidianos, agradecimientos, visitas."
@@ -58,7 +58,7 @@ const floralproducts = [
         id: 7,
         nombre: "Canastos florales",
         descripcion: "Arreglos en canasta con mix de flores y follajes, estilo cálido y campestre.",
-        image: "../../public/images/details/canasto_flores.jpg",
+        image: "public/images/details/canasto_flores.jpg",
         precio: 25,
         material: "Canasto de mimbre, esponja floral",
         ideal: "Cumpleaños, visitas, decoración del hogar."
@@ -67,7 +67,7 @@ const floralproducts = [
         id: 8,
         nombre: "Centros de mesa",
         descripcion: "Diseños pensados para altura y diámetro adecuados, sin bloquear la vista de los invitados.",
-        image: "../../public/images/details/centros_mesa.jpg",
+        image: "public/images/details/centros_mesa.jpg",
         precio: 30,
         material: "Base baja, esponja floral (oasis)",
         ideal: "Bodas, recepciones, eventos corporativos."
@@ -90,13 +90,14 @@ document.addEventListener("DOMContentLoaded", function () {
         var card = document.createElement("article");
         card.className = "bg-[#FDCB80] rounded-2xl p-6 md:p-8 shadow hover:shadow-lg transition";
 
-        // Construcción de la tarjeta respetando el diseño original
+
         // Se agregó un bloque específico para "Material"
         card.innerHTML =
             '<div class="flex flex-col md:flex-row gap-6 items-start">' +
             '  <img src="' + p.image + '" alt="' + p.nombre + '" ' +
             '       class="w-full md:w-60 rounded-xl object-cover" ' +
-            "       onerror=\"this.src='/resources/fallback.jpg';this.alt='Imagen no disponible';\"/>" +
+            "       onerror=\"this.src='public/images/details/bouquet.jpg';this.alt='Imagen no disponible';\"/>"
+            +
             '  <div class="flex-1">' +
             '    <h2 class="text-2xl font-bold text-orange-900">' + p.nombre + "</h2>" +
             '    <p class="mt-2">' + (p.descripcion || "") + "</p>" +
@@ -108,10 +109,10 @@ document.addEventListener("DOMContentLoaded", function () {
             '        <p class="mt-1 text-sm">' + (p.material || "—") + "</p>" +
             "      </div>" +
 
-             '      <div>' +
-             '        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>' +
-             '        <p class="mt-1 text-sm">' + (p.ideal || "—") + '</p>' +
-             '      </div>' +
+            '      <div>' +
+            '        <h3 class="text-sm font-semibold text-orange-900">Ideal para</h3>' +
+            '        <p class="mt-1 text-sm">' + (p.ideal || "—") + '</p>' +
+            '      </div>' +
             "    </div>" +
 
 
