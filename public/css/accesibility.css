@@ -1,0 +1,35 @@
+.high-constrant {
+    color: #FFFFFF;
+    background-color: #000000;
+}
+
+.accesibility-menu {
+    position: fixed;
+    background-color: #000000;
+    width: 200px;
+    height: 500px;
+    top: 20%;
+    left: -100px;
+    scale: 0.5;
+
+    border-radius: 25px;
+
+    display: flex;
+    justify-content: space-around;
+    align-items: end;
+
+    padding-right: 20px;
+
+    flex-direction: column;
+}
+
+.accesibility-menu a {
+    padding: 5px;
+}
+
+.accesibility-menu a:hover {
+    cursor: pointer;
+    background-color: #333333;
+    scale: 1.1;
+    transition: scale 100ms ease;
+}
