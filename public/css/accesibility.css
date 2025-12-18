@@ -1,6 +1,14 @@
-.high-constrant {
+:root {
+    --text-size: 1em;
+}
+
+.high-contrast {
     color: #FFFFFF;
     background-color: #000000;
+}
+
+body {
+    font-size: var(--text-size);
 }
 
 .accesibility-menu {
